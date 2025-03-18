@@ -6,50 +6,50 @@ import { cn } from "@/lib/utils";
 const projects = [
   {
     id: "midnight",
-    title: "Midnight Echoes",
-    type: "Mix & Master",
+    title: "Полночные отголоски",
+    type: "Сведение и мастеринг",
     image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "summer",
-    title: "Summer Haze",
-    type: "Full Production",
+    title: "Летняя дымка",
+    type: "Полный цикл",
     image: "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "electric",
-    title: "Electric Soul",
-    type: "Recording & Mix",
+    title: "Электрическая душа",
+    type: "Запись и сведение",
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "neon",
-    title: "Neon Nights",
-    type: "Production & Master",
+    title: "Неоновые ночи",
+    type: "Продакшн и мастеринг",
     image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "acoustic",
-    title: "Acoustic Sessions",
-    type: "Live Recording",
+    title: "Акустические сессии",
+    type: "Живая запись",
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "digital",
-    title: "Digital Dreams",
-    type: "Electronic Production",
+    title: "Цифровые мечты",
+    type: "Электронная музыка",
     image: "https://images.unsplash.com/photo-1598387993281-ceccc4908367?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "vinyl",
-    title: "Vinyl Revival",
-    type: "Vintage Recording",
+    title: "Возрождение винила",
+    type: "Винтажная запись",
     image: "https://images.unsplash.com/photo-1504509546545-e000b4a62425?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: "rhythm",
-    title: "Rhythm Section",
-    type: "Drum Recording",
+    title: "Ритм-секция",
+    type: "Запись ударных",
     image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   }
 ];
@@ -87,8 +87,8 @@ export default function EchoPortfolio() {
             isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <h2 className="font-bold text-3xl md:text-4xl mb-4">Recent Work</h2>
-          <p className="text-muted-foreground">A selection of albums and projects we've recently worked on.</p>
+          <h2 className="font-bold text-3xl md:text-4xl mb-4">Наши работы</h2>
+          <p className="text-muted-foreground">Альбомы и проекты, над которыми мы недавно работали</p>
         </div>
         
         <div 
@@ -150,7 +150,7 @@ export default function EchoPortfolio() {
             className="bg-primary hover:bg-primary/90 text-white btn-hover shadow-lg hover:shadow-primary/40"
             onClick={scrollToContact}
           >
-            Start Your Project
+            Начать проект
           </Button>
         </div>
       </div>

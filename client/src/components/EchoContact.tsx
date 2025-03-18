@@ -12,12 +12,12 @@ import { useState } from "react";
 
 // Service options for the form
 const serviceOptions = [
-  { value: "recording", label: "Music Recording" },
-  { value: "mixing", label: "Audio Mixing" },
-  { value: "production", label: "Music Production" },
-  { value: "mastering", label: "Mastering" },
-  { value: "voiceover", label: "Voice-Over Recording" },
-  { value: "djschool", label: "DJ School" }
+  { value: "recording", label: "Запись музыки" },
+  { value: "mixing", label: "Сведение аудио" },
+  { value: "production", label: "Музыкальное продюсирование" },
+  { value: "mastering", label: "Мастеринг" },
+  { value: "voiceover", label: "Запись озвучки" },
+  { value: "djschool", label: "Школа диджеев" }
 ];
 
 // Social media links
@@ -89,8 +89,8 @@ export default function EchoContact() {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message Sent",
-        description: "We've received your message and will get back to you soon!",
+        title: "Сообщение отправлено",
+        description: "Мы получили ваше сообщение и скоро свяжемся с вами!",
       });
       
       // Reset form
@@ -114,22 +114,22 @@ export default function EchoContact() {
             isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <h2 className="font-bold text-3xl md:text-4xl mb-4">Book Your Session</h2>
-          <p className="text-muted-foreground">Let's create something amazing together. Contact us to schedule your recording session or discuss your project.</p>
+          <h2 className="font-bold text-3xl md:text-4xl mb-4">Забронируйте сессию</h2>
+          <p className="text-muted-foreground">Давайте создадим что-то удивительное вместе. Свяжитесь с нами, чтобы запланировать запись или обсудить ваш проект.</p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start max-w-6xl mx-auto">
           <div 
             ref={formRef}
             className={cn(
-              "transition-all duration-1000",
+              "transition-all duration-1000 w-full",
               isFormVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             )}
           >
-            <Card className="bg-secondary border-0">
+            <Card className="bg-secondary border-0 shadow-lg">
               <form onSubmit={handleSubmit} className="p-8 space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Your Name</Label>
+                  <Label htmlFor="name">Ваше имя</Label>
                   <Input 
                     id="name" 
                     name="name"
@@ -141,7 +141,7 @@ export default function EchoContact() {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">Адрес электронной почты</Label>
                   <Input 
                     id="email" 
                     name="email"
@@ -154,13 +154,13 @@ export default function EchoContact() {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="service">Service Interested In</Label>
+                  <Label htmlFor="service">Интересующая услуга</Label>
                   <Select 
                     value={formData.service} 
                     onValueChange={handleServiceChange}
                   >
                     <SelectTrigger className="bg-background border-muted/30 focus:ring-2 focus:ring-primary/50">
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder="Выберите услугу" />
                     </SelectTrigger>
                     <SelectContent>
                       {serviceOptions.map(option => (
@@ -173,7 +173,7 @@ export default function EchoContact() {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Project Details</Label>
+                  <Label htmlFor="message">Детали проекта</Label>
                   <Textarea 
                     id="message" 
                     name="message"
@@ -190,7 +190,7 @@ export default function EchoContact() {
                   className="w-full bg-primary hover:bg-primary/90 text-white btn-hover shadow-lg hover:shadow-primary/40 flex items-center justify-center"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Отправка..." : "Отправить сообщение"}
                   {!isSubmitting && (
                     <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -209,7 +209,7 @@ export default function EchoContact() {
             )}
           >
             <div className="mb-8">
-              <h3 className="font-semibold text-2xl mb-4">Studio Location</h3>
+              <h3 className="font-semibold text-2xl mb-4">Расположение студии</h3>
               <div className="rounded-xl overflow-hidden h-64 relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1559732277-7453b141e3a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
@@ -217,8 +217,8 @@ export default function EchoContact() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                  <h4 className="font-medium text-lg mb-1">Echo Studios</h4>
-                  <p className="text-sm text-muted-foreground">123 Music Avenue, Soundtown, NY 10001</p>
+                  <h4 className="font-medium text-lg mb-1">SoundPort</h4>
+                  <p className="text-sm text-muted-foreground">Социалистическая улица, 67, Новосибирск</p>
                 </div>
               </div>
             </div>
@@ -229,9 +229,9 @@ export default function EchoContact() {
                   <Phone className="text-primary h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">Phone</h4>
-                  <p className="text-muted-foreground">(555) 123-4567</p>
-                  <p className="text-sm text-muted-foreground/70 mt-1">Mon-Fri: 10am - 8pm, Sat: 12pm - 6pm</p>
+                  <h4 className="font-medium text-lg">Телефон</h4>
+                  <p className="text-muted-foreground">+7 (913) 780-95-89</p>
+                  <p className="text-sm text-muted-foreground/70 mt-1">Пн-Пт: 10:00 - 20:00, Сб: 12:00 - 18:00</p>
                 </div>
               </div>
               
@@ -240,9 +240,9 @@ export default function EchoContact() {
                   <Mail className="text-blue-400 h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">Email</h4>
-                  <p className="text-muted-foreground">bookings@echostudios.com</p>
-                  <p className="text-sm text-muted-foreground/70 mt-1">We usually respond within 24 hours</p>
+                  <h4 className="font-medium text-lg">Электронная почта</h4>
+                  <p className="text-muted-foreground">bookings@soundport.com</p>
+                  <p className="text-sm text-muted-foreground/70 mt-1">Обычно отвечаем в течение 24 часов</p>
                 </div>
               </div>
               
@@ -251,36 +251,27 @@ export default function EchoContact() {
                   <Calendar className="text-primary h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">Book a Tour</h4>
-                  <p className="text-muted-foreground">Schedule a studio tour before booking</p>
-                  <a href="#" className="text-primary font-medium hover:text-blue-400 transition-colors mt-1 inline-flex items-center">
-                    Book Tour 
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-4 w-4 ml-1" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+                  <h4 className="font-medium text-lg">Часы работы</h4>
+                  <p className="text-muted-foreground">Ежедневно с 10:00 до 22:00</p>
+                  <p className="text-sm text-muted-foreground/70 mt-1">Запись по предварительной договорённости</p>
                 </div>
               </div>
               
-              {/* Social Media Section */}
               <div className="mt-8">
-                <h4 className="font-semibold text-lg mb-4">Follow Us</h4>
+                <h4 className="font-medium text-lg mb-4">Мы в соцсетях</h4>
                 <div className="flex space-x-4">
                   {socialMediaLinks.map((social, index) => (
-                    <a 
+                    <a
                       key={index}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-10 h-10 ${social.bgClass} ${social.textClass} rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110`}
+                      className={cn(
+                        "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
+                        social.bgClass
+                      )}
                     >
-                      <social.icon className="h-5 w-5" />
+                      <social.icon className={cn("h-5 w-5", social.textClass)} />
                     </a>
                   ))}
                 </div>

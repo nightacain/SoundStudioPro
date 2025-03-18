@@ -7,58 +7,58 @@ import { Card, CardContent } from "@/components/ui/card";
 const services = [
   {
     id: "recording",
-    title: "Music Recording",
-    description: "Professional studio recording with state-of-the-art equipment and experienced sound engineers to capture your perfect sound.",
+    title: "Запись музыки",
+    description: "Записываем на профессиональном оборудовании. Опытные звукорежиссёры помогут добиться идеального звучания.",
     icon: Mic,
-    price: "From $80/hour",
+    price: "От 3000 ₽/час",
     popular: true,
     color: "primary",
     image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "mixing",
-    title: "Audio Mixing",
-    description: "Expert mixing services to blend your tracks perfectly, creating a balanced and professional sound for your project.",
+    title: "Сведение",
+    description: "Сбалансируем звучание всех инструментов. Сделаем ваш трек профессиональным и конкурентным.",
     icon: SlidersHorizontal,
-    price: "From $60/hour",
+    price: "От 2500 ₽/час",
     color: "blue",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "production",
-    title: "Music Production",
-    description: "Full-service music production from concept to final master, helping develop your sound with professional producers.",
+    title: "Продюсирование",
+    description: "Создадим музыку с нуля. Поможем развить ваше звучание от идеи до готового мастера.",
     icon: Music,
-    price: "Custom Pricing",
+    price: "Индивидуально",
     color: "primary",
     image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "mastering",
-    title: "Mastering",
-    description: "Professional audio mastering to ensure your tracks sound consistent and polished across all playback systems.",
+    title: "Мастеринг",
+    description: "Сделаем ваш трек громким и сочным. Звук будет качественным на любых колонках и наушниках.",
     icon: Disc,
-    price: "From $50/track",
+    price: "От 2000 ₽/трек",
     color: "blue",
     image: "https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "voiceover",
-    title: "Voice-Over Recording",
-    description: "Professional voice recording services for commercials, audiobooks, podcasts, and other voice-based projects.",
+    title: "Запись голоса",
+    description: "Записываем рекламу, аудиокниги и подкасты. Чистый звук без посторонних шумов.",
     icon: Radio,
-    price: "From $70/hour",
+    price: "От 2500 ₽/час",
     color: "primary",
-    image: "https://images.unsplash.com/photo-1603557435578-5dd4c7667d34?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "/src/mic.jpg"
   },
   {
     id: "djschool",
-    title: "DJ School",
-    description: "Learn the art of DJing with our professional instructors. Master mixing, beatmatching, and performance techniques to start your DJ career.",
+    title: "Школа DJ",
+    description: "Научим сводить треки и работать с аудиторией. Опытные преподаватели помогут освоить основы диджеинга.",
     icon: Headphones,
-    price: "From $95/hour",
+    price: "От 3500 ₽/час",
     color: "blue",
-    image: "https://images.unsplash.com/photo-1571266028243-526a41cce4ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "/src/dj.jpg"
   }
 ];
 
@@ -91,8 +91,8 @@ export default function EchoServices() {
             isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <h2 className="font-bold text-3xl md:text-4xl mb-4">Our Services</h2>
-          <p className="text-muted-foreground">Comprehensive audio production services to help bring your creative vision to life.</p>
+          <h2 className="font-bold text-3xl md:text-4xl mb-4">Наши услуги</h2>
+          <p className="text-muted-foreground">Полный цикл производства аудио: от записи до готового релиза</p>
         </div>
         
         <div 
@@ -122,7 +122,7 @@ export default function EchoServices() {
                 />
                 {service.popular && (
                   <div className="absolute top-4 left-4 bg-primary/90 text-white text-sm font-medium py-1 px-3 rounded-full z-20">
-                    Popular
+                    Популярно
                   </div>
                 )}
               </div>
@@ -140,7 +140,7 @@ export default function EchoServices() {
                     onClick={scrollToContact}
                     className="text-white hover:text-blue-400 transition-colors flex items-center"
                   >
-                    Book Now 
+                    Записаться 
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-4 w-4 ml-2" 

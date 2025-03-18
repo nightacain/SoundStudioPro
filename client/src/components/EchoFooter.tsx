@@ -3,20 +3,20 @@ import { cn } from "@/lib/utils";
 
 // Quick links for the footer
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact", href: "#contact" }
+  { label: "Главная", href: "#home" },
+  { label: "О нас", href: "#about" },
+  { label: "Услуги", href: "#services" },
+  { label: "Портфолио", href: "#portfolio" },
+  { label: "Контакты", href: "#contact" }
 ];
 
 // Services links for the footer
 const serviceLinks = [
-  { label: "Music Recording", href: "#services" },
-  { label: "Audio Mixing", href: "#services" },
-  { label: "Music Production", href: "#services" },
-  { label: "Mastering", href: "#services" },
-  { label: "Voice-Over Recording", href: "#services" }
+  { label: "Запись музыки", href: "#services" },
+  { label: "Сведение", href: "#services" },
+  { label: "Продюсирование", href: "#services" },
+  { label: "Мастеринг", href: "#services" },
+  { label: "Запись голоса", href: "#services" }
 ];
 
 // Social media links
@@ -77,10 +77,10 @@ export default function EchoFooter() {
             <div className="flex items-center space-x-2 mb-4">
               <EchoWaveform scale="sm" className="mr-2" />
               <a href="#" className="text-xl font-bold">
-                <span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text">Echo</span> Studios
+                <span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text">Sound</span>Port
               </a>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md">Professional recording studio delivering premium audio production services for artists, bands, podcasters, and commercial clients.</p>
+            <p className="text-muted-foreground mb-6 max-w-md">Профессиональная студия звукозаписи для музыкантов, групп, подкастеров и рекламных проектов в Новосибирске.</p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
                 <a 
@@ -95,7 +95,7 @@ export default function EchoFooter() {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4">Quick Links</h3>
+            <h3 className="font-medium text-lg mb-4">Навигация</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -115,7 +115,7 @@ export default function EchoFooter() {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4">Services</h3>
+            <h3 className="font-medium text-lg mb-4">Услуги</h3>
             <ul className="space-y-3">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
@@ -136,11 +136,11 @@ export default function EchoFooter() {
         </div>
         
         <div className="mt-12 pt-8 border-t border-muted/20 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground/70 text-sm">&copy; {new Date().getFullYear()} Echo Studios. All rights reserved.</p>
+          <p className="text-muted-foreground/70 text-sm">&copy; {new Date().getFullYear()} SoundPort. Все права защищены.</p>
           <div className="mt-4 md:mt-0 flex space-x-6 text-sm">
-            <a href="#" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">Terms of Service</a>
-            <a href="#" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">Cookie Policy</a>
+            <a href="#" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">Конфиденциальность</a>
+            <a href="#" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">Условия использования</a>
+            <a href="#" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">Файлы cookie</a>
           </div>
         </div>
       </div>

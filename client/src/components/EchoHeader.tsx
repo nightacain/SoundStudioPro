@@ -60,7 +60,7 @@ export default function EchoHeader() {
             }}
             className="text-2xl font-bold"
           >
-            <span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text">Echo</span> Studios
+            <span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text">Sound</span>Port
           </a>
         </div>
         
@@ -80,24 +80,30 @@ export default function EchoHeader() {
         
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          {["home", "about", "services", "portfolio", "contact"].map((section) => (
+          {[
+            { id: "home", label: "Главная" },
+            { id: "about", label: "О нас" },
+            { id: "services", label: "Услуги" },
+            { id: "portfolio", label: "Портфолио" },
+            { id: "contact", label: "Контакты" }
+          ].map((section) => (
             <a
-              key={section}
-              href={`#${section}`}
+              key={section.id}
+              href={`#${section.id}`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection(section);
+                scrollToSection(section.id);
               }}
               className="nav-link font-medium hover:text-primary transition-colors"
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section.label}
             </a>
           ))}
           <Button
             className="ml-4 bg-primary hover:bg-primary/90 text-white btn-hover"
             onClick={() => scrollToSection("contact")}
           >
-            Book Now
+            Записаться
           </Button>
         </nav>
       </div>
@@ -110,24 +116,30 @@ export default function EchoHeader() {
         )}
       >
         <div className="container mx-auto px-4 py-3">
-          {["home", "about", "services", "portfolio", "contact"].map((section) => (
+          {[
+            { id: "home", label: "Главная" },
+            { id: "about", label: "О нас" },
+            { id: "services", label: "Услуги" },
+            { id: "portfolio", label: "Портфолио" },
+            { id: "contact", label: "Контакты" }
+          ].map((section) => (
             <a
-              key={section}
-              href={`#${section}`}
+              key={section.id}
+              href={`#${section.id}`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection(section);
+                scrollToSection(section.id);
               }}
               className="block py-3 px-4 hover:bg-muted/10 rounded-lg transition-colors"
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section.label}
             </a>
           ))}
           <Button
             className="w-full mt-2 bg-primary text-white"
             onClick={() => scrollToSection("contact")}
           >
-            Book Now
+            Записаться
           </Button>
         </div>
       </div>

@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 
 // Stats data
 const stats = [
-  { label: "Years Experience", value: "12+", id: "years" },
-  { label: "Artists Recorded", value: "500+", id: "artists" },
-  { label: "Albums Produced", value: "200+", id: "albums" },
-  { label: "Industry Awards", value: "15", id: "awards" }
+  { label: "Лет опыта", value: "12+", id: "years" },
+  { label: "Записанных артистов", value: "500+", id: "artists" },
+  { label: "Выпущенных альбомов", value: "200+", id: "albums" },
+  { label: "Профессиональных наград", value: "15", id: "awards" }
 ];
 
 export default function EchoAbout() {
@@ -29,14 +29,14 @@ export default function EchoAbout() {
             isSectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
             <h2 className="font-bold text-3xl mb-6 inline-block relative">
-              About Echo Studios
+              О студии SoundPort
               <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary"></span>
             </h2>
             <p className="text-muted-foreground mb-6">
-              Founded in 2010, Echo Studios has become the premier destination for artists looking to create professional, high-quality recordings in a comfortable and inspiring environment.
+              С 2010 года создаём качественные записи для музыкантов. Работаем в просторной студии с профессиональным оборудованием и акустикой.
             </p>
             <p className="text-muted-foreground mb-6">
-              Our team of experienced engineers and producers is dedicated to helping you achieve your artistic vision, whether you're recording a full album, single track, or voice-over project.
+              Наши звукорежиссёры помогут записать альбом, сингл или войсовер. Создадим именно то звучание, которое вы хотите.
             </p>
             <div className="flex flex-wrap gap-6 mt-8">
               <div className="flex items-center">
@@ -44,8 +44,8 @@ export default function EchoAbout() {
                   <Medal className="text-primary h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-lg">Award Winning</h3>
-                  <p className="text-sm text-muted-foreground">Multiple industry awards</p>
+                  <h3 className="font-medium text-lg">Признание</h3>
+                  <p className="text-sm text-muted-foreground">Награды в индустрии</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -53,8 +53,8 @@ export default function EchoAbout() {
                   <Headphones className="text-blue-400 h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-lg">Pro Equipment</h3>
-                  <p className="text-sm text-muted-foreground">State-of-the-art gear</p>
+                  <h3 className="font-medium text-lg">Оборудование</h3>
+                  <p className="text-sm text-muted-foreground">Топовые микрофоны и пульты</p>
                 </div>
               </div>
             </div>
@@ -67,8 +67,8 @@ export default function EchoAbout() {
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-blue-400/30 rounded-lg blur-xl opacity-70 group-hover:opacity-100 transition duration-1000"></div>
             <div className="relative aspect-video overflow-hidden rounded-xl">
               <img 
-                src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="Echo Studios Recording Room" 
+                src="/src/main.jpg" 
+                alt="Студия звукозаписи SoundPort" 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
               />
             </div>
