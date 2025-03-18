@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, Calendar } from "lucide-react";
+import { Phone, Mail, Calendar, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 
 // Service options for the form
@@ -17,7 +17,35 @@ const serviceOptions = [
   { value: "production", label: "Music Production" },
   { value: "mastering", label: "Mastering" },
   { value: "voiceover", label: "Voice-Over Recording" },
-  { value: "live", label: "Live Session Recording" }
+  { value: "djschool", label: "DJ School" }
+];
+
+// Social media links
+const socialMediaLinks = [
+  { 
+    icon: Instagram, 
+    bgClass: "bg-purple-500/20 hover:bg-purple-500/30", 
+    textClass: "text-purple-500", 
+    url: "https://instagram.com/echostudios" 
+  },
+  { 
+    icon: Facebook, 
+    bgClass: "bg-blue-600/20 hover:bg-blue-600/30", 
+    textClass: "text-blue-600", 
+    url: "https://facebook.com/echostudios" 
+  },
+  { 
+    icon: Twitter, 
+    bgClass: "bg-blue-400/20 hover:bg-blue-400/30", 
+    textClass: "text-blue-400", 
+    url: "https://twitter.com/echostudios" 
+  },
+  { 
+    icon: Youtube, 
+    bgClass: "bg-red-600/20 hover:bg-red-600/30", 
+    textClass: "text-red-600", 
+    url: "https://youtube.com/echostudios" 
+  }
 ];
 
 export default function EchoContact() {
@@ -237,6 +265,24 @@ export default function EchoContact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>
+                </div>
+              </div>
+              
+              {/* Social Media Section */}
+              <div className="mt-8">
+                <h4 className="font-semibold text-lg mb-4">Follow Us</h4>
+                <div className="flex space-x-4">
+                  {socialMediaLinks.map((social, index) => (
+                    <a 
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-10 h-10 ${social.bgClass} ${social.textClass} rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110`}
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
