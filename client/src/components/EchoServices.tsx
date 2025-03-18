@@ -1,6 +1,6 @@
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { cn } from "@/lib/utils";
-import { Mic, SlidersHorizontal, Music, Disc, Radio, Guitar } from "lucide-react";
+import { Mic, SlidersHorizontal, Music, Disc, Radio, Guitar, Headphones } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 // Services data
@@ -52,13 +52,13 @@ const services = [
     image: "https://images.unsplash.com/photo-1603557435578-5dd4c7667d34?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: "live",
-    title: "Live Session Recording",
-    description: "Capture the energy of your live performances with our multi-track recording setup perfect for bands and ensembles.",
-    icon: Guitar,
+    id: "djschool",
+    title: "DJ School",
+    description: "Learn the art of DJing with our professional instructors. Master mixing, beatmatching, and performance techniques to start your DJ career.",
+    icon: Headphones,
     price: "From $95/hour",
     color: "blue",
-    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1571266028243-526a41cce4ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
